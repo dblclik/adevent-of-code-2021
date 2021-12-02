@@ -29,3 +29,15 @@ func consumeIntFile(filepath string) ([]int, error) {
 
 	return returnData, nil
 }
+
+func consumeFile(filepath string) ([]string, error) {
+	fileData, err := ioutil.ReadFile(filepath)
+	if err != nil {
+		fmt.Println("File reading error", err)
+		return nil, fmt.Errorf("FileParseError: Could not parse file: %v", filepath)
+	}
+
+	stringData := strings.Split(string(fileData), "\n")
+
+	return stringData, nil
+}
