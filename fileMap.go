@@ -6,6 +6,7 @@ func initFileMap() map[string]string {
 		"2": "data/day2.input.txt",
 		"3": "data/day3.input.txt",
 		"4": "data/day4.input.txt",
+		"5": "data/day5.input.txt",
 	}
 
 	return filemap
