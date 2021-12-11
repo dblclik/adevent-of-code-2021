@@ -12,5 +12,7 @@ func aocSwitch(day string, fileMap map[string]string) {
 		day4(fileMap[day])
 	case "5":
 		day5(fileMap[day])
+	case "6":
+		day6(fileMap[day])
 	}
 }
