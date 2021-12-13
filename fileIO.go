@@ -8,14 +8,14 @@ import (
 	"strings"
 )
 
-func consumeIntFile(filepath string) ([]int, error) {
+func consumeIntFile(filepath string, sep string) ([]int, error) {
 	fileData, err := ioutil.ReadFile(filepath)
 	if err != nil {
 		fmt.Println("File reading error", err)
 		return nil, fmt.Errorf("FileParseError: Could not parse file: %v", filepath)
 	}
 
-	stringData := strings.Split(string(fileData), "\n")
+	stringData := strings.Split(string(fileData), sep)
 	returnData := make([]int, len(stringData))
 
 	for i, val := range stringData {

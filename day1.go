@@ -9,7 +9,7 @@ import (
 */
 func day1(filepath string) {
 	log.Println("Ingesting day 1 file...")
-	day1Data, err := consumeIntFile(filepath)
+	day1Data, err := consumeIntFile(filepath, "\n")
 	if err != nil {
 		log.Println("Error consuming file!")
 		return

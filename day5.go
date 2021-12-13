@@ -114,7 +114,6 @@ func day5(filepath string) {
 			}
 
 			nextPoint := Point{x: startPoint.x, y: startPoint.y}
-			log.Println("Start Point:", startPoint, "End Point:", endPoint, "Next Point:", nextPoint)
 			for {
 				floorGrid[nextPoint.x][nextPoint.y]++
 				if (nextPoint.x == endPoint.x) && (nextPoint.y == endPoint.y) {
@@ -122,13 +121,13 @@ func day5(filepath string) {
 				}
 				nextPoint.x++
 				nextPoint.y += incrementer
-				log.Println("Start Point:", startPoint, "End Point:", endPoint, "Next Point:", nextPoint)
 			}
 		}
 
 	}
 
 	for row := 0; row < len(floorGrid); row++ {
+		log.Println(floorGrid[row])
 		for col := 0; col < len(floorGrid[row]); col++ {
 			if floorGrid[row][col] > 1 {
 				overlaps++
